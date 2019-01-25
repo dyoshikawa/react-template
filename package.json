@@ -1,0 +1,24 @@
+{
+  "name": "react-ts-template",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -r \"npm:type-check:watch\" \"npm:start\"",
+    "start": "parcel ./src/index.html",
+    "build": "npm run type-check && parcel build ./src/index.html --public-url '/'",
+    "prettify": "prettier --write './src/**/*.{ts,tsx}'",
+    "type-check": "tsc --noEmit --jsx react ./**/*.tsx",
+    "type-check:watch": "tsc --noEmit --jsx react --watch ./**/*.tsx"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.7.20",
+    "@types/react-dom": "^16.0.11",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.16.1",
+    "typescript": "^3.2.4"
+  }
+}
