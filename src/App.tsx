@@ -1,9 +1,18 @@
 import * as React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-interface Props {}
+import Home from './components/Home'
+import About from './components/About'
 
-const App: React.SFC<Props> = () => {
-  return <div className="container">Hello Parcel</div>
-}
+type Props = {}
+
+const App: React.FC<Props> = () => (
+  <BrowserRouter>
+    <div>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+    </div>
+  </BrowserRouter>
+)
 
 export default App
