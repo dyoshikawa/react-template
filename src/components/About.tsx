@@ -5,19 +5,14 @@ type Props = {
   dispatchAddTask: (task: string) => any
 }
 
-export default class Tasks extends React.Component<Props, {}> {
-  render() {
-    console.log(this.props.tasks)
-    return (
-      <div>
-        <h1>Tasks</h1>
-        <button onClick={() => this.props.dispatchAddTask('task')}>
-          タスク追加
-        </button>
-        {this.props.tasks.tasks.map(task => (
-          <div key={task}>{task}</div>
-        ))}
-      </div>
-    )
-  }
-}
+const Tasks: React.FC<Props> = props => (
+  <div>
+    <h1>Tasks</h1>
+    <button onClick={() => props.dispatchAddTask('task')}>タスク追加</button>
+    {props.tasks.tasks.map(task => (
+      <div key={task}>{task}</div>
+    ))}
+  </div>
+)
+
+export default Tasks
