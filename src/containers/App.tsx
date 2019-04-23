@@ -1,8 +1,7 @@
-import React from 'react'
 import { connect } from 'react-redux'
 
 import App from '../components/App'
-import { increment } from '../actions/App'
+import { increment } from '../actions/counter'
 
 function mapStateToProps(state: any) {
   return state

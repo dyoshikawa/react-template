@@ -1,17 +1,20 @@
-import React from 'react'
 import { connect } from 'react-redux'
 
 import Home from '../components/Home'
-import { increment } from '../actions/App'
+import { increment, decrement } from '../actions/counter'
+import { Dispatch } from 'redux'
 
 function mapStateToProps(state: any) {
   return state
 }
 
-function mapDispatchToProps(dispatch: any) {
+function mapDispatchToProps(dispatch: Dispatch) {
   return {
-    handleClick: () => {
+    dispatchIncrement: () => {
       dispatch(increment())
+    },
+    dispatchDecrement: () => {
+      dispatch(decrement())
     },
   }
 }

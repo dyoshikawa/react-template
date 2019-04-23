@@ -1,17 +1,17 @@
-import React from 'react'
 import { connect } from 'react-redux'
 
 import About from '../components/About'
-import { increment } from '../actions/App'
+import { addTask } from '../actions/tasks'
+import { Dispatch } from 'redux'
 
 function mapStateToProps(state: any) {
   return state
 }
 
-function mapDispatchToProps(dispatch: any) {
+function mapDispatchToProps(dispatch: Dispatch) {
   return {
-    handleClick: () => {
-      dispatch(increment())
+    dispatchAddTask: (task: string) => {
+      dispatch(addTask(task))
     },
   }
 }
