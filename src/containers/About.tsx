@@ -4,6 +4,8 @@ import About from '../components/About'
 import { addTask } from '../actions/tasks'
 import { Dispatch } from 'redux'
 
+import reducer from '../reducer'
+
 function mapStateToProps(state: any) {
   return state
 }
