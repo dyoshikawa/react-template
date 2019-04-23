@@ -7,6 +7,7 @@ type Props = {
 
 export default class Tasks extends React.Component<Props, {}> {
   render() {
+    console.log(this.props.tasks)
     return (
       <div>
         <h1>Tasks</h1>

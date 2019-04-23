@@ -1,17 +1,23 @@
 import { Action } from 'redux'
 
 type TasksActionType = 'ADD_TASK'
-type TasksAction = Action<TasksActionType>
 
-const initialState = {
+interface TasksAction extends Action {
+  type: TasksActionType
+  payload: {
+    task: string
+  }
+}
+
+const initialState: { tasks: string[] } = {
   tasks: [],
 }
 
 export default function tasks(state = initialState, action: TasksAction) {
   switch (action.type) {
     case 'ADD_TASK':
-      const tasks = state.tasks.push(action.task)
-      return { tasks: tasks }
+      console.log(action.payload.task)
+      return { tasks: state.tasks.concat([action.payload.task]) }
     default:
       return state
   }

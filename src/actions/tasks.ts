@@ -1,3 +1,3 @@
 export const addTask = (task: string) => {
-  return { type: 'ADD_TASK', task: task }
+  return { type: 'ADD_TASK', payload: { task: task } }
 }
