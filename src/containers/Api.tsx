@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import Counter from '~/components/Api'
-import { fetchApi } from '~/actions/api'
+import { fetchApiRequested } from '~/actions/api'
 import { Dispatch } from 'redux'
 
 import { RootState } from '~/reducer'
@@ -12,8 +12,8 @@ function mapStateToProps(state: RootState) {
 
 function mapDispatchToProps(dispatch: Dispatch) {
   return {
-    dispatchFetchApi: () => {
-      dispatch(fetchApi())
+    dispatchFetchApiRequested: () => {
+      dispatch(fetchApiRequested())
     },
   }
 }
