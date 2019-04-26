@@ -8,13 +8,13 @@ type Props = {
   dispatchDecrement: () => any
 }
 
-const Home: React.FC<Props> = props => (
+const Counter: React.FC<Props> = props => (
   <div>
-    <h1>Home</h1>
+    <h1>Counter</h1>
     <span>{props.counter.count}</span>
     <button onClick={() => props.dispatchIncrement()}>+</button>
     <button onClick={() => props.dispatchDecrement()}>-</button>
   </div>
 )
 
-export default Home
+export default Counter

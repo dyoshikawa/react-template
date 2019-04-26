@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import About from '../components/About'
+import About from '../components/Tasks'
 import { addTask } from '../actions/tasks'
 import { Dispatch } from 'redux'
 
