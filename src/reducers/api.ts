@@ -9,7 +9,7 @@ interface ApiAction extends Action {
   }
 }
 
-type ApiState = {
+export type ApiState = {
   response: {
     text: string
   }
@@ -24,7 +24,7 @@ const initialState: ApiState = {
 export default function counter(state = initialState, action: ApiAction) {
   switch (action.type) {
     case 'FETCH_API':
-      return { text: action.payload.text }
+      return { response: { text: action.payload.text } }
     default:
       return state
   }

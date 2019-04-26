@@ -1,19 +1,18 @@
 import * as React from 'react'
+import console = require('console')
 
 type Props = {
-  counter: {
-    count: number
+  response: {
+    text: string
   }
-  dispatchIncrement: () => any
-  dispatchDecrement: () => any
+  dispatchFetchApi: () => void
 }
 
 const Counter: React.FC<Props> = props => (
   <div>
-    <h1>Counter</h1>
-    <span>{props.counter.count}</span>
-    <button onClick={() => props.dispatchIncrement()}>+</button>
-    <button onClick={() => props.dispatchDecrement()}>-</button>
+    <h1>API</h1>
+    <button onClick={() => props.dispatchFetchApi()}>Fetch</button>
+    <div>{props.response.text}</div>
   </div>
 )
 
